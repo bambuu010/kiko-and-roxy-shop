@@ -104,6 +104,7 @@ function renderProducts() {
 
   document.getElementById('productGrid').innerHTML = visible.length ? visible.map(product => `
     <article class="product-card">
+      <span class="origin-badge">Korea import</span>
       <div class="product-art">${product.image ? `<img src="${escapeText(product.image)}" alt="${escapeText(product.name)}">` : escapeText(product.badge || 'PET')}</div>
       <div class="product-body">
         <p class="category">${escapeText(product.category)}</p>
