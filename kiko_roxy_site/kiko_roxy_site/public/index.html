@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiko and Roxy | Монгол дахь амьтны дэлгүүр</title>
+  <meta name="theme-color" content="#225aa7" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="assets/kiko-roxy-emblem.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/kiko-roxy-emblem.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="mini-strip">
+    <div class="mini-inner">
+      <a href="#shop">Kiko and Roxy</a>
+      <a href="#shop">Pet Fashion</a>
+      <a href="#shop">Deals</a>
+      <a href="#shop">Supplies</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#shop">
+      <img src="assets/kiko-roxy-emblem.svg" alt="Kiko and Roxy emblem" />
+      <strong>Kiko and Roxy</strong>
+    </a>
+    <div class="service-promises">
+      <span>Хурдан хүргэлт</span>
+      <span>QPay / Банк</span>
+      <span>Захиалга хянах</span>
+    </div>
+    <div class="header-actions">
+      <button class="account-pill" type="button" onclick="toggleAccount()">Нэвтрэх</button>
+      <button class="cart-pill" type="button" onclick="toggleCart()">Сагс <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <nav class="search-bar" aria-label="Дэлгүүрийн хайлт">
+    <a class="category-menu" href="#shop">Бүх ангилал</a>
+    <div class="search-box">
+      <input id="searchInput" type="search" placeholder="Хоол, тоглоом, амттан хайх..." />
+      <button class="search-button" id="searchButton" type="button">Хайх</button>
+    </div>
+  </nav>
+
+  <main class="market-shell">
+    <section id="shop" class="market-layout">
+      <aside class="category-sidebar">
+        <h2>Ангилал</h2>
+        <div class="filters" id="categoryFilters"></div>
+        <a href="#how">Захиалга яаж ажиллах вэ?</a>
+        <a href="#contact">Холбоо барих</a>
+      </aside>
+
+      <div class="market-main">
+        <section class="deal-hero">
+          <div>
+            <p class="eyebrow">Өнөөдрийн санал</p>
+            <h1>Амьтандаа хэрэгтэй бүхнийг нэг дороос.</h1>
+            <p>Хоол, амттан, тоглоом, хэрэгсэлээ сонгоод захиалгаа илгээнэ. Бид төлбөр болон хүргэлтийг баталгаажуулаад холбогдоно.</p>
+            <div class="hero-actions">
+              <button class="primary" type="button" onclick="document.getElementById('searchInput').focus()">Бараа хайх</button>
+              <button class="secondary" type="button" onclick="toggleCart()">Сагс харах</button>
+            </div>
+          </div>
+          <div class="deal-visual" aria-hidden="true">
+            <span class="sale-badge">SALE</span>
+            <div class="product-bubble">PET</div>
+            <div class="price-tag">MNT</div>
+          </div>
+        </section>
+
+        <section class="product-section" aria-label="Бараанууд">
+          <div class="section-head compact">
+            <div>
+              <p class="eyebrow">Kiko and Roxy</p>
+              <h2>Бараанууд</h2>
+            </div>
+            <p>Үнэ нь төгрөгөөр харагдана. Та сагсандаа нэмээд захиалгын мэдээллээ илгээнэ.</p>
+          </div>
+          <div class="product-grid" id="productGrid"></div>
+        </section>
+      </div>
+
+      <aside class="right-deals">
+        <article class="promo-card orange">
+          <strong>70% хүртэл</strong>
+          <span>Онцгой хямдрал</span>
+          <button type="button" onclick="setCategory('All')">Бүгдийг харах</button>
+        </article>
+        <article class="promo-card blue">
+          <strong>Шинэ</strong>
+          <span>Амттан ба тоглоом</span>
+          <button type="button" onclick="document.getElementById('searchInput').focus()">Хайх</button>
+        </article>
+        <article class="delivery-box">
+          <h3>Хүргэлтийн сонголт</h3>
+          <p>Хүргэлт, өөрөө авах, хот дотор хүргэлт бүгд боломжтой.</p>
+        </article>
+      </aside>
+    </section>
+
+    <section id="how" class="info-band">
+      <article>
+        <strong>1</strong>
+        <h3>Захиалга илгээх</h3>
+        <p>Бараагаа сагсанд хийж, утас, имэйл, хүргэлтийн мэдээллээ илгээнэ.</p>
+      </article>
+      <article>
+        <strong>2</strong>
+        <h3>Бид баталгаажуулна</h3>
+        <p>Kiko and Roxy тантай утас эсвэл имэйлээр холбогдож захиалгыг баталгаажуулна.</p>
+      </article>
+      <article>
+        <strong>3</strong>
+        <h3>Захиалгаа хянах</h3>
+        <p>Нэвтэрсний дараа өөрийн захиалгын төлөвийг “Миний захиалгууд” хэсгээс харна.</p>
+      </article>
+    </section>
+
+    <section id="contact" class="contact section">
+      <div>
+        <p class="eyebrow">Холбоо барих</p>
+        <h2>Захиалахаасаа өмнө асуух зүйл байна уу?</h2>
+      </div>
+      <div>
+        <p><strong>Имэйл:</strong> hello@kikoandroxy.mn</p>
+        <p><strong>Утас:</strong> дэлгүүрийн дугаараа оруулна уу</p>
+        <p><strong>Улс:</strong> Монгол</p>
+      </div>
+    </section>
+  </main>
+
+  <aside id="cart" class="cart">
+    <button class="close" type="button" onclick="toggleCart()">x</button>
+    <p class="eyebrow">Захиалгын хэсэг</p>
+    <h2>Таны сагс</h2>
+    <div id="cartItems"></div>
+    <div class="cart-total">
+      <span>Нийт</span>
+      <strong id="cartTotal">MNT 0</strong>
+    </div>
+    <form id="orderForm" class="checkout-form">
+      <input id="customerName" type="text" placeholder="Овог нэр" required />
+      <input id="customerPhone" type="tel" placeholder="Утасны дугаар" required />
+      <input id="customerEmail" type="email" placeholder="Имэйл хаяг" required />
+      <select id="deliveryMethod" required>
+        <option value="Shipping">Шуудан хүргэлт</option>
+        <option value="Pickup">Өөрөө авах</option>
+        <option value="Local delivery">Хот дотор хүргэлт</option>
+      </select>
+      <select id="paymentMethod" required>
+        <option value="Bank transfer">Банкны шилжүүлэг</option>
+        <option value="QPay">QPay</option>
+      </select>
+      <div class="payment-note">
+        <strong>Төлбөрийн мэдээлэл</strong>
+        <p>Банк: Khan Bank</p>
+        <p>Данс: 0000000000</p>
+        <p>Хүлээн авагч: Kiko and Roxy</p>
+        <p>QPay: захиалгын хувилбарт QR холболт нэмж болно.</p>
+      </div>
+      <textarea id="customerAddress" rows="3" placeholder="Хаяг эсвэл авах тэмдэглэл"></textarea>
+      <textarea id="customerNotes" rows="2" placeholder="Нэмэлт тэмдэглэл"></textarea>
+      <button class="primary" type="submit">Захиалга илгээх</button>
+    </form>
+  </aside>
+
+  <aside id="accountPanel" class="cart account-panel">
+    <button class="close" type="button" onclick="toggleAccount()">x</button>
+    <p class="eyebrow">Хэрэглэгчийн бүртгэл</p>
+    <h2 id="accountTitle">Нэвтрэх</h2>
+
+    <div id="accountSummary" class="account-summary hidden">
+      <p id="accountGreeting"></p>
+      <button class="primary" type="button" onclick="loadMyOrders()">Миний захиалгууд</button>
+      <button class="secondary" type="button" onclick="logoutCustomer()">Гарах</button>
+    </div>
+
+    <div id="myOrdersPanel" class="account-orders hidden">
+      <h3>Миний захиалгууд</h3>
+      <div id="myOrdersList"></div>
+    </div>
+
+    <form id="loginForm" class="checkout-form">
+      <input id="loginEmail" type="email" placeholder="Имэйл хаяг" required />
+      <input id="loginPassword" type="password" placeholder="Нууц үг" required />
+      <button class="primary" type="submit">Нэвтрэх</button>
+      <button class="secondary" type="button" onclick="showSignup()">Бүртгэл үүсгэх</button>
+    </form>
+
+    <form id="signupForm" class="checkout-form hidden">
+      <input id="signupName" type="text" placeholder="Овог нэр" required />
+      <input id="signupEmail" type="email" placeholder="Имэйл хаяг" required />
+      <input id="signupPhone" type="tel" placeholder="Утасны дугаар" required />
+      <textarea id="signupAddress" rows="3" placeholder="Үндсэн хүргэлтийн хаяг"></textarea>
+      <input id="signupPassword" type="password" placeholder="Нууц үг" required />
+      <button class="primary" type="submit">Бүртгүүлэх</button>
+      <button class="secondary" type="button" onclick="showLogin()">Бүртгэлтэй хэрэглэгч</button>
+    </form>
+  </aside>
+
+  <a class="go-up" href="#shop" aria-label="Дээш очих">↑</a>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiko and Roxy | Удирдлага</title>
+  <meta name="theme-color" content="#225aa7" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="assets/kiko-roxy-emblem.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/kiko-roxy-emblem.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <img src="assets/kiko-roxy-emblem.svg" alt="Kiko and Roxy emblem" />
+      <strong>Kiko and Roxy</strong>
+    </a>
+    <div class="service-promises">
+      <span>Бараа удирдах</span>
+      <span>Захиалга хянах</span>
+      <span>Мөнгө харах</span>
+    </div>
+    <div class="header-actions">
+      <a class="secondary" href="/">Дэлгүүр</a>
+      <button id="logoutButton" class="danger hidden" type="button">Гарах</button>
+    </div>
+  </header>
+
+  <main class="market-shell">
+    <section id="manageLogin" class="login-card manage-login">
+      <p class="eyebrow">Нууц удирдлага</p>
+      <h1>Admin нэвтрэх</h1>
+      <p class="muted">Эндээс бараа нэмэх, засах, устгах болон захиалга хянах боломжтой.</p>
+      <form id="manageLoginForm">
+        <input id="manageUsername" type="text" placeholder="Нэвтрэх нэр" value="admin" autocomplete="username" />
+        <input id="managePassword" type="password" placeholder="Нууц үг" autocomplete="current-password" />
+        <button class="primary" type="submit">Нэвтрэх</button>
+      </form>
+      <p class="error" id="manageLoginError"></p>
+    </section>
+
+    <section id="manageDashboard" class="hidden">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Дэлгүүрийн удирдлага</p>
+          <h1>Бараа ба захиалга</h1>
+        </div>
+        <button class="secondary" type="button" id="refreshButton">Шинэчлэх</button>
+      </div>
+
+      <div class="stats">
+        <div><span>Нийт борлуулалт</span><strong id="manageRevenue">MNT 0</strong></div>
+        <div><span>Захиалга</span><strong id="manageOrderCount">0</strong></div>
+        <div><span>Бараа</span><strong id="manageProductCount">0</strong></div>
+      </div>
+
+      <div class="manage-tabs" role="tablist" aria-label="Удирдлагын таб">
+        <button id="productsTab" class="active" type="button">Бараа</button>
+        <button id="ordersTab" type="button">Захиалга</button>
+      </div>
+
+      <div id="productsPanel" class="manage-grid">
+        <section class="panel">
+          <h2 id="productFormTitle">Шинэ бараа нэмэх</h2>
+          <form id="productForm">
+            <input id="productId" type="hidden" />
+            <input id="productName" type="text" placeholder="Барааны нэр" required />
+            <select id="productCategory" required>
+              <option value="">Ангилал сонгох</option>
+              <option value="Амьтны хоол">Амьтны хоол</option>
+              <option value="Амттан">Амттан</option>
+              <option value="Тоглоом">Тоглоом</option>
+              <option value="Хэрэгсэл">Хэрэгсэл</option>
+              <option value="Арчилгаа">Арчилгаа</option>
+              <option value="Хувцас">Хувцас</option>
+              <option value="Эрүүл мэнд">Эрүүл мэнд</option>
+              <option value="Бусад">Бусад</option>
+            </select>
+            <input id="productPrice" type="number" min="0" step="100" placeholder="Үнэ" required />
+            <input id="productStock" type="number" min="0" step="1" placeholder="Үлдэгдэл" required />
+            <input id="productBadge" type="text" placeholder="Зураггүй үед харагдах үг: PET" />
+            <input id="productImage" type="url" placeholder="Зургийн холбоос / URL" />
+            <textarea id="productDescription" rows="4" placeholder="Тайлбар" required></textarea>
+            <button class="primary" type="submit">Хадгалах</button>
+            <button class="secondary" id="clearProductButton" type="button">Шинэ бараа болгох</button>
+          </form>
+        </section>
+
+        <section class="panel">
+          <h2>Барааны жагсаалт</h2>
+          <div class="admin-list" id="productsList"></div>
+        </section>
+      </div>
+
+      <section id="ordersPanel" class="panel orders-panel hidden">
+        <h2>Захиалгууд</h2>
+        <div class="admin-list" id="manageOrdersList"></div>
+      </section>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="manage.js"></script>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Kiko and Roxy emblem</title>
+  <desc id="desc">A round emblem with K and R letters, pet ears, and a paw mark.</desc>
+  <defs>
+    <linearGradient id="bg" x1="18" y1="16" x2="110" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#168780"/>
+      <stop offset="1" stop-color="#EF6F5A"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="59" fill="#FFFDF8"/>
+  <circle cx="64" cy="64" r="53" fill="url(#bg)"/>
+  <path d="M38 33 28 17c-2-3 2-7 5-4l19 15c-5 1-10 2-14 5Z" fill="#1F2D3A"/>
+  <path d="M90 33 100 17c2-3-2-7-5-4L76 28c5 1 10 2 14 5Z" fill="#1F2D3A"/>
+  <circle cx="64" cy="66" r="38" fill="#FFFDF8" opacity=".96"/>
+  <text x="64" y="71" text-anchor="middle" fill="#1F2D3A" font-family="Georgia, serif" font-size="34" font-weight="700" letter-spacing="1">K&amp;R</text>
+  <circle cx="52" cy="88" r="5" fill="#168780"/>
+  <circle cx="64" cy="84" r="6" fill="#168780"/>
+  <circle cx="76" cy="88" r="5" fill="#168780"/>
+  <path d="M54 99c4-8 16-8 20 0 2 4-1 8-5 7-3-1-7-1-10 0-4 1-7-3-5-7Z" fill="#168780"/>
+  <circle cx="64" cy="64" r="59" fill="none" stroke="#1F2D3A" stroke-width="4"/>
+</svg>

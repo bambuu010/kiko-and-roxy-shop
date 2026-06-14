@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiko and Roxy | Захиалгууд</title>
+  <meta name="theme-color" content="#225aa7" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="assets/kiko-roxy-emblem.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/kiko-roxy-emblem.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <img src="assets/kiko-roxy-emblem.svg" alt="Kiko and Roxy emblem" />
+      <strong>Kiko and Roxy захиалгууд</strong>
+    </a>
+    <nav>
+      <a href="/">Дэлгүүр</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section orders-page">
+      <div id="ordersLogin" class="login-card">
+        <p class="eyebrow">Нууц захиалгын хэсэг</p>
+        <h1>Захиалгын нэвтрэлт</h1>
+        <p class="muted">Хэн юу захиалсныг харахын тулд эзэмшигчийн эрхээр нэвтэрнэ үү.</p>
+        <form id="ordersLoginForm">
+          <input id="ordersUsername" type="text" placeholder="Нэвтрэх нэр" value="admin" autocomplete="username" />
+          <input id="ordersPassword" type="password" placeholder="Нууц үг" autocomplete="current-password" />
+          <button class="primary" type="submit">Захиалгууд нээх</button>
+        </form>
+        <p class="error" id="ordersLoginError"></p>
+      </div>
+
+      <div id="ordersDashboard" class="hidden">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Захиалгын удирдлага</p>
+            <h1>Хэн юу захиалсан бэ</h1>
+          </div>
+          <button class="secondary" type="button" onclick="loadOrders()">Шинэчлэх</button>
+        </div>
+
+        <div class="stats">
+          <div><span>Нийт захиалгын дүн</span><strong id="ordersRevenue">MNT 0</strong></div>
+          <div><span>Нийт захиалга</span><strong id="ordersCount">0</strong></div>
+          <div><span>Шинэ захиалга</span><strong id="newOrdersCount">0</strong></div>
+        </div>
+
+        <div class="panel orders-panel">
+          <h2>Захиалгууд</h2>
+          <div class="admin-list" id="ordersList"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="orders.js"></script>
+  <script src="pwa-register.js"></script>
+</body>
+</html>

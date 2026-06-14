@@ -1,0 +1,99 @@
+{
+  "products": [
+    {
+      "id": "kr-food-1",
+      "name": "Гөлөгний премиум хоол",
+      "category": "Амьтны хоол",
+      "price": 42000,
+      "stock": 24,
+      "description": "Өсөж буй нохойд зориулсан тахиа, будаа, ногоотой өдөр тутмын тэнцвэртэй хоол.",
+      "image": "",
+      "badge": "Нохой"
+    },
+    {
+      "id": "kr-food-2",
+      "name": "Муурны яргай загасны хоол",
+      "category": "Амьтны хоол",
+      "price": 39000,
+      "stock": 18,
+      "description": "Муурт зориулсан зөөлөн найрлагатай, үнэр сайтай яргай загасны хоол.",
+      "image": "",
+      "badge": "Муур"
+    },
+    {
+      "id": "kr-treat-1",
+      "name": "Шүд арчилгааны зажилдаг амттан",
+      "category": "Амттан",
+      "price": 18000,
+      "stock": 40,
+      "description": "Сайн занг урамшуулах, шүдний арчилгаанд туслах шаржигнуур амттан.",
+      "image": "",
+      "badge": "Амттан"
+    },
+    {
+      "id": "kr-toy-1",
+      "name": "Өдөн саваа тоглоом",
+      "category": "Тоглоом",
+      "price": 15000,
+      "stock": 30,
+      "description": "Идэвхтэй мууранд зориулсан хөнгөн, хөгжилтэй өдөн саваа тоглоом.",
+      "image": "",
+      "badge": "Тоглоом"
+    }
+  ],
+  "orders": [
+    {
+      "id": "KR-69591833",
+      "createdAt": "2026-06-13T16:53:11.833Z",
+      "status": "Confirmed",
+      "paymentMethod": "Bank transfer",
+      "paymentStatus": "Waiting for payment confirmation",
+      "deliveryMethod": "Shipping",
+      "customer": {
+        "name": "test1",
+        "phone": "01021998299",
+        "email": "test1@test.com",
+        "address": "",
+        "notes": ""
+      },
+      "items": [
+        {
+          "id": "kr-food-1",
+          "name": "Гөлөгний премиум хоол",
+          "category": "Амьтны хоол",
+          "price": 42000,
+          "quantity": 1,
+          "subtotal": 42000
+        },
+        {
+          "id": "kr-food-2",
+          "name": "Муурны яргай загасны хоол",
+          "category": "Амьтны хоол",
+          "price": 39000,
+          "quantity": 1,
+          "subtotal": 39000
+        }
+      ],
+      "total": 81000,
+      "userId": "user-1781369555690"
+    }
+  ],
+  "settings": {
+    "storeName": "Kiko and Roxy",
+    "currency": "MNT",
+    "country": "Монгол",
+    "contactEmail": "admin",
+    "contactPhone": "admin"
+  },
+  "users": [
+    {
+      "id": "user-1781369555690",
+      "name": "test1",
+      "email": "test1@test.com",
+      "phone": "01021998299",
+      "address": "",
+      "passwordHash": "89d875e428cfd64242c27cec7618f17d:2f96f48ff81d025d54a683ad99f8943941a91c7f66625899866adcae0695ed8a253797dab90ba7acbc12fe74c5389674385f51c46bea2842f796df4e6b577cef",
+      "createdAt": "2026-06-13T16:52:35.728Z"
+    }
+  ]
+}

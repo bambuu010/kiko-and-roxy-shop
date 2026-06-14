@@ -1,0 +1,20 @@
+{
+  "name": "Kiko and Roxy",
+  "short_name": "Kiko Roxy",
+  "description": "Монгол дахь амьтны онлайн дэлгүүр.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f3f5f7",
+  "theme_color": "#225aa7",
+  "orientation": "portrait-primary",
+  "lang": "mn",
+  "icons": [
+    {
+      "src": "/assets/kiko-roxy-emblem.svg",
+      "sizes": "128x128",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

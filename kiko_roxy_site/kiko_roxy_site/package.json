@@ -1,0 +1,9 @@
+{
+  "name": "kiko-and-roxy-shop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "No-payment online shop for Kiko and Roxy.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
